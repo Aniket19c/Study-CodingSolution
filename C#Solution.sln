@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArmstrongNumber", "Armstron
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDuplicates", "FindDuplicates\FindDuplicates.csproj", "{8358E197-2E40-41F2-9363-3D0D050422DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumber", "PrimeNumber\PrimeNumber.csproj", "{9E9F9BED-FFA0-4E15-BD1D-77DF1DC91CA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8358E197-2E40-41F2-9363-3D0D050422DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8358E197-2E40-41F2-9363-3D0D050422DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8358E197-2E40-41F2-9363-3D0D050422DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E9F9BED-FFA0-4E15-BD1D-77DF1DC91CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E9F9BED-FFA0-4E15-BD1D-77DF1DC91CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E9F9BED-FFA0-4E15-BD1D-77DF1DC91CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E9F9BED-FFA0-4E15-BD1D-77DF1DC91CA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
