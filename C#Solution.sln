@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parse", "Parse\Parse.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArmstrongNumber", "ArmstrongNumber\ArmstrongNumber.csproj", "{9057AE24-F7FE-404A-8826-34FBA043617F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDuplicates", "FindDuplicates\FindDuplicates.csproj", "{8358E197-2E40-41F2-9363-3D0D050422DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9057AE24-F7FE-404A-8826-34FBA043617F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9057AE24-F7FE-404A-8826-34FBA043617F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9057AE24-F7FE-404A-8826-34FBA043617F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8358E197-2E40-41F2-9363-3D0D050422DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8358E197-2E40-41F2-9363-3D0D050422DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8358E197-2E40-41F2-9363-3D0D050422DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8358E197-2E40-41F2-9363-3D0D050422DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
