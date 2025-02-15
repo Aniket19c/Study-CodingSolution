@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loops", "C#Solution\Loops.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalStatement", "ConditionalStatement\ConditionalStatement.csproj", "{D0CBAB0C-D69D-4C54-A5BC-C759548FEEB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parse", "Parse\Parse.csproj", "{304F56D8-39FF-4361-A1E7-CD38334573FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D0CBAB0C-D69D-4C54-A5BC-C759548FEEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0CBAB0C-D69D-4C54-A5BC-C759548FEEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0CBAB0C-D69D-4C54-A5BC-C759548FEEB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{304F56D8-39FF-4361-A1E7-CD38334573FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{304F56D8-39FF-4361-A1E7-CD38334573FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{304F56D8-39FF-4361-A1E7-CD38334573FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{304F56D8-39FF-4361-A1E7-CD38334573FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
