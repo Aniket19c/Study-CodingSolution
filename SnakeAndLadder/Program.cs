@@ -2,73 +2,72 @@
 
 class SnakeLadderGame
 {
-    static Random random = new Random();
-    static int[] board = new int[101];
-    static int player1Pos = 0, player2Pos = 0;
-    static int player1Rolls = 0, player2Rolls = 0;
+    static Random rng = new Random();
+    static int[] gameBoard = new int[101];
+    static int alicePosition = 0, bobPosition = 0;
+    static int aliceRollCount = 0, bobRollCount = 0;
 
     static void Main()
     {
-        InitializeBoard();
-        PlayGame();
+        SetupBoard();
+        StartGame();
     }
 
-    static void InitializeBoard()
+    static void SetupBoard()
     {
-        
-        board[3] = 22; board[5] = 8; board[11] = 26; board[20] = 29;
-        board[27] = 56; board[39] = 60; board[50] = 66; board[53] = 76;
-        board[63] = 81; board[70] = 92;
+        gameBoard[3] = 22; gameBoard[5] = 8; gameBoard[11] = 26; gameBoard[20] = 29;
+        gameBoard[27] = 56; gameBoard[39] = 60; gameBoard[50] = 66; gameBoard[53] = 76;
+        gameBoard[63] = 81; gameBoard[70] = 92;
 
-        board[17] = 4; board[19] = 7; board[21] = 9; board[27] = 1;
-        board[54] = 34; board[62] = 18; board[64] = 60; board[87] = 24;
-        board[93] = 73; board[95] = 75; board[99] = 78;
+        gameBoard[17] = 4; gameBoard[19] = 7; gameBoard[21] = 9; gameBoard[27] = 1;
+        gameBoard[54] = 34; gameBoard[62] = 18; gameBoard[64] = 60; gameBoard[87] = 24;
+        gameBoard[93] = 73; gameBoard[95] = 75; gameBoard[99] = 78;
     }
 
-    static void PlayGame()
+    static void StartGame()
     {
-        bool player1Turn = true;
-        while (player1Pos < 100 && player2Pos < 100)
+        bool isAliceTurn = true;
+        while (alicePosition < 100 && bobPosition < 100)
         {
-            if (player1Turn)
+            if (isAliceTurn)
             {
-                player1Rolls++;
-                player1Pos = MovePlayer(player1Pos, "Player 1");
-                if (player1Pos == 100) break;
+                aliceRollCount++;
+                alicePosition = MovePlayer(alicePosition, "Alice");
+                if (alicePosition == 100) break;
             }
             else
             {
-                player2Rolls++;
-                player2Pos = MovePlayer(player2Pos, "Player 2");
-                if (player2Pos == 100) break;
+                bobRollCount++;
+                bobPosition = MovePlayer(bobPosition, "Bob");
+                if (bobPosition == 100) break;
             }
-            player1Turn = !player1Turn;
+            isAliceTurn = !isAliceTurn;
         }
 
-        Console.WriteLine(player1Pos == 100 ? "Player 1 wins!" : "Player 2 wins!");
-        Console.WriteLine($"Player 1 Rolls: {player1Rolls}, Player 2 Rolls: {player2Rolls}");
+        Console.WriteLine(alicePosition == 100 ? "Alice wins!" : "Bob wins!");
+        Console.WriteLine($"Alice Rolls: {aliceRollCount}, Bob Rolls: {bobRollCount}");
     }
 
-    static int MovePlayer(int position, string player)
+    static int MovePlayer(int currentPos, string playerName)
     {
-        int diceRoll = random.Next(1, 7);
-        Console.WriteLine($"{player} rolled a {diceRoll}");
+        int diceRoll = rng.Next(1, 7);
+        Console.WriteLine($"{playerName} rolled a {diceRoll}");
 
-        int newPosition = position + diceRoll;
-        if (newPosition > 100)
+        int nextPos = currentPos + diceRoll;
+        if (nextPos > 100)
         {
-            Console.WriteLine($"{player} stays at {position} (needs exact roll to win)");
-            return position;
+            Console.WriteLine($"{playerName} stays at {currentPos} (needs exact roll to win)");
+            return currentPos;
         }
 
-        if (board[newPosition] != 0)
+        if (gameBoard[nextPos] != 0)
         {
-            string action = board[newPosition] > newPosition ? "Ladder!" : "Snake!";
-            Console.WriteLine($"{player} encountered a {action}, moving to {board[newPosition]}");
-            newPosition = board[newPosition];
+            string eventType = gameBoard[nextPos] > nextPos ? "Ladder!" : "Snake!";
+            Console.WriteLine($"{playerName} encountered a {eventType}, moving to {gameBoard[nextPos]}");
+            nextPos = gameBoard[nextPos];
         }
 
-        Console.WriteLine($"{player} moves to {newPosition}\n");
-        return newPosition;
+        Console.WriteLine($"{playerName} moves to {nextPos}\n");
+        return nextPos;
     }
 }
