@@ -4,8 +4,8 @@ class SnakeLadderGame
 {
     static Random rng = new Random();
     static int[] gameBoard = new int[101];
-    static int alicePosition = 0, bobPosition = 0;
-    static int aliceRollCount = 0, bobRollCount = 0;
+    static int p1Position = 0, p2Position = 0;
+    static int p1RollCount = 0, p2RollCount = 0;
 
     static void Main()
     {
@@ -26,26 +26,26 @@ class SnakeLadderGame
 
     static void StartGame()
     {
-        bool isAliceTurn = true;
-        while (alicePosition < 100 && bobPosition < 100)
+        bool isP1Turn = true;
+        while (p1Position < 100 && p2Position < 100)
         {
-            if (isAliceTurn)
+            if (isP1Turn)
             {
-                aliceRollCount++;
-                alicePosition = MovePlayer(alicePosition, "Alice");
-                if (alicePosition == 100) break;
+                p1RollCount++;
+                p1Position = MovePlayer(p1Position, "Player 1");
+                if (p1Position == 100) break;
             }
             else
             {
-                bobRollCount++;
-                bobPosition = MovePlayer(bobPosition, "Bob");
-                if (bobPosition == 100) break;
+                p2RollCount++;
+                p2Position = MovePlayer(p2Position, "Player 2");
+                if (p2Position == 100) break;
             }
-            isAliceTurn = !isAliceTurn;
+            isP1Turn = !isP1Turn;
         }
 
-        Console.WriteLine(alicePosition == 100 ? "Alice wins!" : "Bob wins!");
-        Console.WriteLine($"Alice Rolls: {aliceRollCount}, Bob Rolls: {bobRollCount}");
+        Console.WriteLine(p1Position == 100 ? "Player 1 wins!" : "Player 2 wins!");
+        Console.WriteLine($"Player 1 Rolls: {p1RollCount}, Player 2 Rolls: {p2RollCount}");
     }
 
     static int MovePlayer(int currentPos, string playerName)
